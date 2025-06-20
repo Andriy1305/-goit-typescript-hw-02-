@@ -1,27 +1,28 @@
-// src/components/SearchBar/SearchBar.tsx
-
-import React, { useState, ChangeEvent, FormEvent } from "react";
+import React, { useState, FormEvent, ChangeEvent } from "react";
 import styles from "./SearchBar.module.css";
-import toast from "react-hot-toast";
+//import toast from "react-hot-toast";
+import { toast } from "react-hot-toast";
 
-export type SearchBarProps = {
+interface SearchBarProps {
   onSubmit: (query: string) => void;
-};
+}
 
 export default function SearchBar({ onSubmit }: SearchBarProps) {
-  const [query, setQuery] = useState<string>("");
+  const [query, setQuery] = useState("");
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const trimmedQuery = query.trim();
 
     if (trimmedQuery === "") {
-      toast.error("Введіть запит для пошуку зображень!");
+      toast("Введіть запит для пошуку зображень!", {
+        icon: "⚠️",
+      });
       return;
     }
 
     onSubmit(trimmedQuery);
-    setQuery("");
+    setQuery(""); // очищаємо інпут
   };
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -36,7 +37,9 @@ export default function SearchBar({ onSubmit }: SearchBarProps) {
             type="submit"
             className={styles.searchButton}
             aria-label="Search"
-          ></button>
+          >
+            🔍
+          </button>
           <input
             type="text"
             value={query}

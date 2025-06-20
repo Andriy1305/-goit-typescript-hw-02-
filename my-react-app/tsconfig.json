@@ -1,9 +1,9 @@
 {
   "compilerOptions": {
     "target": "ESNext",
-    "lib": ["DOM", "DOM.Iterable", "ES2015", "ESNext"],
-    "module": "ESNext",
-    "moduleResolution": "node",
+    "lib": ["DOM", "DOM.Iterable", "ES2015", "ESNext", "WebWorker"],
+    "module": "Node16",
+    "moduleResolution": "node16",
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "strict": true,
@@ -11,8 +11,10 @@
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "types": ["node"]
+    "types": ["node"],
+    "allowImportingTsExtensions": true
   },
+
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

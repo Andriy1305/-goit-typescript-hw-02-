@@ -1,6 +1,6 @@
 import styles from "./ImageCard.module.css";
-import { ItemCardProps } from "../../types/common";
-import { Image } from "../../types/image";
+import { ItemCardProps } from "../../types/common.ts";
+import { Image } from "../../types/image.ts";
 
 export type ImageCardProps = ItemCardProps<Image>;
 

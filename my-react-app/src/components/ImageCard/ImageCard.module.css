@@ -1,0 +1,9 @@
+/* ImageModal.module.css */
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.modalContent {
+  background: transparent;
+}

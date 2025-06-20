@@ -1,5 +1,5 @@
 import axios from "axios";
-import { Image } from "../types/image.ts";
+import { Image } from "../types/image";
 
 const ACCESS_KEY = import.meta.env.VITE_UNSPLASH_ACCESS_KEY as string;
 

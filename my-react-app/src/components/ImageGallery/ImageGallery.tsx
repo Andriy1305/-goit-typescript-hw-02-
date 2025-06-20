@@ -1,7 +1,7 @@
-import ImageCard from "../ImageCard/ImageCard.tsx";
+import ImageCard from "../ImageCard/ImageCard";
 import styles from "./ImageGallery.module.css";
-import { type Image } from "../../types/image.ts";
-import { ItemListProps } from "../../types/common.ts";
+import { type Image } from "../../types/image";
+import { ItemListProps } from "../../types/common";
 
 // Тепер: items — це масив Image, onItemClick прийме Image
 export type ImageGalleryProps = ItemListProps<Image>;

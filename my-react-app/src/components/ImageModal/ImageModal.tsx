@@ -3,7 +3,7 @@
 import React from "react";
 import Modal from "react-modal";
 import styles from "./ImageModal.module.css";
-import { Image } from "../../types/image.ts";
+import { Image } from "../../types/image";
 
 export type ImageModalProps = {
   isOpen: boolean;

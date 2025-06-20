@@ -2,14 +2,14 @@ import React, { useState, useEffect } from "react";
 //import toast, { Toaster } from "react-hot-toast";
 import { toast, Toaster } from "react-hot-toast";
 
-import SearchBar from "./components/SearchBar/SearchBar.tsx";
-import ImageGallery from "./components/ImageGallery/ImageGallery.tsx";
-import Loader from "./components/Loader/Loader.tsx";
-import ErrorMessage from "./components/ErrorMessage/ErrorMessage.tsx";
-import LoadMoreBtn from "./components/LoadMoreBtn/LoadMoreBtn.tsx";
-import ImageModal from "./components/ImageModal/ImageModal.tsx";
-import { fetchImages, SearchResponse } from "./services/api.tsx";
-import { Image } from "./types/image.tsx";
+import SearchBar from "./components/SearchBar/SearchBar";
+import ImageGallery from "./components/ImageGallery/ImageGallery";
+import Loader from "./components/Loader/Loader";
+import ErrorMessage from "./components/ErrorMessage/ErrorMessage";
+import LoadMoreBtn from "./components/LoadMoreBtn/LoadMoreBtn";
+import ImageModal from "./components/ImageModal/ImageModal";
+import { fetchImages, SearchResponse } from "./services/api";
+import { Image } from "./types/image";
 
 export default function App() {
   const [query, setQuery] = useState<string>("");

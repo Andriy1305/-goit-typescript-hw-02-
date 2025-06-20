@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "target": "ESNext",
-    "lib": ["DOM", "DOM.Iterable", "ES2015", "ESNext", "WebWorker"],
+    "lib": ["DOM", "DOM.Iterable", "ES2020", "WebWorker"],
     "module": "ESNext",
     "moduleResolution": "bundler",
     "esModuleInterop": true,
@@ -9,12 +9,10 @@
     "strict": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "noEmit": true,
     "jsx": "react-jsx",
-    "types": ["node"],
+    "types": ["vite/client", "node", "dom"],
     "allowImportingTsExtensions": true
   },
-
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
